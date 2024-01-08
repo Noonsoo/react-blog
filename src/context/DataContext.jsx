@@ -13,13 +13,11 @@ export const DataProvider = ({ children }) => {
     "https://nonso-blog-5076a0251a21.herokuapp.com/posts"
   );
 
-  console.log(isLoading);
-  console.log(fetchError);
-  console.log(data);
   useEffect(() => {
-    setPosts(data);
-  }, []);
-
+    if (data) {
+      setPosts(data);
+    }
+  }, [data]);
   useEffect(() => {
     const filteredResults = posts?.filter(
       (post) =>
