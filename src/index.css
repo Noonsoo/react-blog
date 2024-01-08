@@ -157,6 +157,10 @@ body {
   margin-top: 0;
 }
 
+.post:hover{
+  background-color: #d4c9c9;
+}
+
 .post:last-child {
   border-bottom: none;
 }
@@ -164,10 +168,15 @@ body {
 .postDate {
   font-size: 0.75rem;
   margin-top: 0.25rem;
+  margin-left: 5px;
 }
 
 .postBody {
-  margin: 1rem 0;
+  margin: 1rem 5px;
+}
+
+h2{
+  margin: 0 5px;
 }
 
 .newPostForm {
