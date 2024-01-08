@@ -13,17 +13,20 @@ export const DataProvider = ({ children }) => {
     "http://localhost:3000/posts"
   );
 
+  console.log(isLoading);
+  console.log(fetchError);
+  console.log(data);
   useEffect(() => {
     setPosts(data);
   }, []);
-  console.log(data);
+
   useEffect(() => {
     const filteredResults = posts?.filter(
       (post) =>
         post?.body.toLowerCase().includes(search?.toLowerCase()) ||
         post?.title.toLowerCase().includes(search?.toLowerCase())
     );
-    console.log(filteredResults);
+
     setSearchResults(filteredResults?.reverse());
   }, [posts, search]);
   console.log(posts);
@@ -40,6 +43,7 @@ export const DataProvider = ({ children }) => {
         setSearch,
         searchResults,
         setSearchResults,
+        isLoading,
       }}>
       {children}
     </DataContext.Provider>

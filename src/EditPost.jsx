@@ -29,6 +29,7 @@ function EditPost() {
     const updatedPost = { id, title: editTitle, datetime, body: editBody };
     try {
       const response = await api.put(`/posts/${id}`, updatedPost);
+      console.log(response);
       setPosts(
         posts.map((post) => (post.id === id ? { ...response.data } : post))
       );
