@@ -195,6 +195,10 @@ body {
   height: 100px;
 }
 
+.post_button {
+  margin-left: 5px;
+}
+
 .newPostForm button {
   margin-top: 1rem;
   height: 48px;
